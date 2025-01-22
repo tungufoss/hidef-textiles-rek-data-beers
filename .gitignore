@@ -5,10 +5,10 @@
 *.log
 *.nav
 *.out
-*.pdf
 *.snm
 *.toc
-
+*.xdv
+svg-inkscape/
 
 # Misc*.
 *.idea/
