@@ -22,12 +22,13 @@
             \includegraphics[width=\paperwidth,height=\paperheight]{#2}
         };
     }
-    \ifx&#1&
+    \ifx
+        &#1&
         \section{#3}
     \fi
     \addtobeamertemplate{frametitle}{\vskip5cm}{} % Adjust the frametitle position for this slide only
     \begin{frame}[plain]{#3}
-        #1
+    #1
     \end{frame}
     \addtobeamertemplate{frametitle}{\vskip-5cm}{} % Reset the frametitle template to default
     \usebackgroundtemplate{}  % Reset the background for the following frames
@@ -35,87 +36,87 @@
 
 \begin{document}
 
-\begin{frame}{About the Project}
+    \begin{frame}{About the Project}
 
-    \begin{block}{The HiDef Textiles Project}
-        This project made STEAM\footnote{S: Science, T: Technology, E: Engineering, A: Arts, M: Mathematics.} fields accessible through innovation in textiles by combining artistic creativity and sustainability. The interdisciplinary collaboration involved the \alert{University of Iceland}, the \alert{Iceland University of the Arts}, and domestic companies and institutions.
-    \end{block}
+        \begin{block}{The HiDef Textiles Project}
+            This project made STEAM\footnote{S: Science, T: Technology, E: Engineering, A: Arts, M: Mathematics.} fields accessible through innovation in textiles by combining artistic creativity and sustainability. The interdisciplinary collaboration involved the \alert{University of Iceland}, the \alert{Iceland University of the Arts}, and domestic companies and institutions.
+        \end{block}
 
-    \begin{itemize}
-        \item \textbf{90s Knitting Machine:} Transformed for modern users. The renewal process was used to teach technical literacy innovatively.
-        \item \textbf{Objective:} Preserved traditions and brought them into a digital context.
-        \item \textbf{Demonstration Tool:} Created a functional machine showcased locally and ready for further development.
-    \end{itemize}
+        \begin{itemize}
+            \item \textbf{90s Knitting Machine:} Transformed for modern users. The renewal process was used to teach technical literacy innovatively.
+            \item \textbf{Objective:} Preserved traditions and brought them into a digital context.
+            \item \textbf{Demonstration Tool:} Created a functional machine showcased locally and ready for further development.
+        \end{itemize}
 
-\end{frame}
+    \end{frame}
 
-\begin{frame}{Inspiration}
+    \begin{frame}{Inspiration}
 
-    \begin{columns}
-        \begin{column}{0.65\textwidth}
-            \begin{alertblock}{\href{https://vimeo.com/58580261}{Knitterstream}}
-                An art performance at the \alert{C2-MTL} conference in 2012, where tweets with the hashtag \alert{\#knitterstream} were knitted for the attending audience.
-            \end{alertblock}
+        \begin{columns}
+            \begin{column}{0.65\textwidth}
+                \begin{alertblock}{\href{https://vimeo.com/58580261}{Knitterstream}}
+                    An art performance at the \alert{C2-MTL} conference in 2012, where tweets with the hashtag \alert{\#knitterstream} were knitted for the attending audience.
+                \end{alertblock}
 
-            \begin{itemize}
-                \item Same type of knitting machine as my grandmother's.
-                \item Software available on \href{https://github.com/borgstrom/KnitterStream/tree/master}{GitHub}.
-                \item Drafts for improvements made at \href{https://web.archive.org/web/20150918225135/http://wiki.fablab.is/wiki/HiKnitterStream}{FabLab Reykjavík} in 2014.
-                \item Proper research project funded by the \alert{Icelandic Student Innovation Fund} in summer 2024.
-            \end{itemize}
+                \begin{itemize}
+                    \item Same type of knitting machine as my grandmother's.
+                    \item Software available on \href{https://github.com/borgstrom/KnitterStream/tree/master}{GitHub}.
+                    \item Drafts for improvements made at \href{https://web.archive.org/web/20150918225135/http://wiki.fablab.is/wiki/HiKnitterStream}{FabLab Reykjavík} in 2014.
+                    \item Proper research project funded by the \alert{Icelandic Student Innovation Fund} in summer 2024.
+                \end{itemize}
 
-        \end{column}
-        \begin{column}{0.35\textwidth}
-            \includegraphics[width=\textwidth, trim={16cm 44cm 16cm 40cm},clip]{include/knitterstream_23.jpg}
-        \end{column}
+            \end{column}
+            \begin{column}{0.35\textwidth}
+                \includegraphics[width=\textwidth, trim={16cm 44cm 16cm 40cm},clip]{include/knitterstream_23.jpg}
+            \end{column}
 
-    \end{columns}
+        \end{columns}
 
-\end{frame}
+    \end{frame}
 
-\begin{frame}[allowframebreaks]{Participants}
-\begin{columns}
-\begin{column}{0.4\linewidth}
-    \begin{block}{Instructors}
-        \begin{description}
-            \item[Hafliði] FABLAB, UI
-            \item[Hafsteinn] Computer Science, UI
-            \item[Helga] Industrial Eng., UI
-            \item[Hörður] Computer \& Electrical Eng., UI
-            \item[Ragna] Fashion Design, IUA
-        \end{description}
-    \end{block}    
-\end{column}
+    \begin{frame}[allowframebreaks]{Participants}
+        \begin{columns}
+            \begin{column}{0.4\linewidth}
+                \begin{block}{Instructors}
+                    \begin{description}
+                        \item[Hafliði] FABLAB, UI
+                        \item[Hafsteinn] Computer Science, UI
+                        \item[Helga] Industrial Eng., UI
+                        \item[Hörður] Computer \& Electrical Eng., UI
+                        \item[Ragna] Fashion Design, IUA
+                    \end{description}
+                \end{block}
+            \end{column}
 
-\begin{column}{0.45\linewidth}
-    \begin{block}{Students}
-        \begin{description}
-            \item[Elli] Mechanical Eng. and Computer Science, UI.
-            \item[Gísa] Fashion Design, IUA.
-            \item[Snæja] Applied Mathematics and Computer Science, UI.
-        \end{description}
-    \end{block}
-\end{column}
-\end{columns}
+            \begin{column}{0.45\linewidth}
+                \begin{block}{Students}
+                    \begin{description}
+                        \item[Elli] Mechanical Eng. and Computer Science, UI.
+                        \item[Gísa] Fashion Design, IUA.
+                        \item[Snæja] Applied Mathematics and Computer Science, UI.
+                    \end{description}
+                \end{block}
+            \end{column}
+        \end{columns}
 
-\framebreak
+        \framebreak
 
-\begin{block}{Collaborators}
-    \begin{description}
-        \item[Icelandic Textile Center] A digital textile workshop in Blöndós, providing spare parts.
-        \item[Ístex] Supplies locally sourced yarn.
-        \item[The Icelandic Handicraft Association and National Museum of Iceland] Jointly published  \alert{Sjónabók}, which we use as base patterns for our work.
-        \item[Marel] A leading manufacturer of equipment for fish processing plants, offering expertise in industrial mechanics and technology.
-        \item[\'{Y}rúrarí] \'Yr Jóhannsdóttir, a renowned knitting designer, formerly worked with Passap but now works with \alert{Kniterate}.
-        \item[Owen Mace] Retired electrical engineer from South Australia.
-    \end{description}
-\end{block}
+        \begin{block}{Collaborators}
+            \begin{description}
+                \item[Icelandic Textile Center] A digital textile workshop in Blöndós, providing spare parts.
+                \item[Ístex] Supplies locally sourced yarn.
+                \item[The Icelandic Handicraft Association and National Museum of Iceland] Jointly published  \alert{Sjónabók}, which we use as base patterns for our work.
+                \item[Marel] A leading manufacturer of equipment for fish processing plants, offering expertise in industrial mechanics and technology.
+                \item[\'{Y}rúrarí] \'Yr Jóhannsdóttir, a renowned knitting designer, formerly worked with Passap but now works with \alert{Kniterate}.
+                \item[Owen Mace] Retired electrical engineer from South Australia.
+            \end{description}
+        \end{block}
 
-\end{frame}
+    \end{frame}
 
-\customframe[]{include/mbl-e6000.jpg}{Machinery}
+    \customframe[]{include/mbl-e6000.jpg}{Machinery}
 
-\begin{frame}{Passap Knitting Machines}
+    \begin{frame}{Passap Knitting Machines}
 
 % Brief history of Passap
         PASSAP (PAtent Schnell Strick AParat), founded in Switzerland in 1939, was a leader in hobby knitting machines. They ceased production around the turn of the millennium.
@@ -152,23 +153,23 @@
         \end{columns}
     \end{frame}
 
-\begin{frame}{Kniterate}
+    \begin{frame}{Kniterate}
 
-    \href{https://www.kniterate.com/product/kniterate-the-digital-knitting-machine/}{Kniterate}, a digital knitting machine from Spain, designed for small-batch manufacturers and designers. Only two such machines in Iceland.
+        \href{https://www.kniterate.com/product/kniterate-the-digital-knitting-machine/}{Kniterate}, a digital knitting machine from Spain, designed for small-batch manufacturers and designers. Only two such machines in Iceland.
 
-    \begin{description}
-        \item[Advantage] Originally a ``hack'' of similar 80s/90s knitting machines, it was launched on \href{https://www.kickstarter.com/projects/kniterate/kniterate-the-digital-knitting-machine/}{Kickstarter} in 2017 (then priced at \texteuro{}4,500).
-        \item[Disadvantage] Long waiting list and expensive (priced from \texteuro{}16,000).
-    \end{description}
+        \begin{description}
+            \item[Advantage] Originally a ``hack'' of similar 80s/90s knitting machines, it was launched on \href{https://www.kickstarter.com/projects/kniterate/kniterate-the-digital-knitting-machine/}{Kickstarter} in 2017 (then priced at \texteuro{}4,500).
+            \item[Disadvantage] Long waiting list and expensive (priced from \texteuro{}16,000).
+        \end{description}
 
-    \begin{figure}
-        \centering
-        \includegraphics[height=.5\textheight]{include/skema-kniterate.png} ~~~~      \includegraphics[height=.5\textheight]{include/kniterate-helloworld.jpg}
+        \begin{figure}
+            \centering
+            \includegraphics[height=.5\textheight]{include/skema-kniterate.png} ~~~~      \includegraphics[height=.5\textheight]{include/kniterate-helloworld.jpg}
 
-    \end{figure}
-\end{frame}
+        \end{figure}
+    \end{frame}
 
-\customframe[]{include/sjónabók-safn.jpg}{Knitting Patterns}
+    \customframe[]{include/sjónabók-safn.jpg}{Knitting Patterns}
 
     \begin{frame}[allowframebreaks]{The Icelandic Sjónabók}
 
@@ -212,14 +213,14 @@
         \url{https://github.com/HiDefTextiles/Sjonabok}
     \end{frame}
 
-\customframe[]{include/swatches.jpg}{Knitting Swatches}
+    \customframe[]{include/swatches.jpg}{Knitting Swatches}
 
     \begin{frame}{Hello World}
 
-    \begin{quote}
-        What better way to say we've arrived in the world of digital knitting than...
-    \end{quote}
-    
+        \begin{quote}
+            What better way to say we've arrived in the world of digital knitting than...
+        \end{quote}
+
         \begin{figure}
             \centering
             \caption{First try}
@@ -295,142 +296,142 @@
 
         \end{columns}
 
-\end{frame}
+    \end{frame}
 
-\customframe[]{include/swatches.jpg}{What Next?}
+    \customframe[]{include/swatches.jpg}{What Next?}
 
-\begin{frame}{Lessons Learned and Next Steps}
-    \begin{itemize}
-        \item \textbf{Hardware Improvements:} While the machine is functional, there are kinks in hardware control, especially in color changes, requiring upgrades.
-        \item \textbf{Pattern Workflow:} Experimentation with generative AI superimposed with \emph{Sjónabók} patterns shows promise, but the workflow needs further refinement.
-        \item \textbf{Future Vision:} Hardware upgrades to make the more common Duo 80 model as capable as the E6000 would be a significant advancement.
-    \end{itemize}
-\end{frame}
+    \begin{frame}{Lessons Learned and Next Steps}
+        \begin{itemize}
+            \item \textbf{Hardware Improvements:} While the machine is functional, there are kinks in hardware control, especially in color changes, requiring upgrades.
+            \item \textbf{Pattern Workflow:} Experimentation with generative AI superimposed with \emph{Sjónabók} patterns shows promise, but the workflow needs further refinement.
+            \item \textbf{Future Vision:} Hardware upgrades to make the more common Duo 80 model as capable as the E6000 would be a significant advancement.
+        \end{itemize}
+    \end{frame}
 
-\begin{frame}{Generative Patterns}
-    \begin{figure}
-        \centering
-        \begin{tikzpicture}[
-            node distance=6pt and 2cm,
-            arrow/.style={-stealth, thick}, 
-            image/.style={inner sep=0pt},
-            label/.style={font=\small} 
-        ]
-            % Nodes for images
-            \node[image] (sjonabok) at (0,0) {\includegraphics[width=0.1\linewidth]{include/sjonabok_after.png}};
-            \node[image, right=of sjonabok] (wfc) {\includegraphics[width=0.3\linewidth]{include/wfc.png}};
-            
-            % Labels for the images
-            \node[label, below=of sjonabok] {Pattern Source};
-            \node[label, below=of wfc] {Generated Pattern};
+    \begin{frame}{Generative Patterns}
+        \begin{figure}
+            \centering
+            \begin{tikzpicture}[
+                node distance=6pt and 2cm,
+                arrow/.style={-stealth, thick},
+                image/.style={inner sep=0pt},
+                label/.style={font=\small}
+            ]
+                % Nodes for images
+                \node[image] (sjonabok) at (0,0) {\includegraphics[width=0.1\linewidth]{include/sjonabok_after.png}};
+                \node[image, right=of sjonabok] (wfc) {\includegraphics[width=0.3\linewidth]{include/wfc.png}};
 
-            % Arrow connecting the images
-            \draw[arrow] ([xshift=5mm]sjonabok.east) -- ([xshift=-5mm]wfc.west) node[above, midway, font=\small] {WFC};
-        \end{tikzpicture}
-        \caption{Preliminary experiments using generative algorithms, like \alert{Wave Function Collapse} (WFC), to create novel patterns inspired by traditional \alert{Sjónabók} motifs.}
-    \end{figure}
-\end{frame}
+                % Labels for the images
+                \node[label, below=of sjonabok] {Pattern Source};
+                \node[label, below=of wfc] {Generated Pattern};
+
+                % Arrow connecting the images
+                \draw[arrow] ([xshift=5mm]sjonabok.east) -- ([xshift=-5mm]wfc.west) node[above, midway, font=\small] {WFC};
+            \end{tikzpicture}
+            \caption{Preliminary experiments using generative algorithms, like \alert{Wave Function Collapse} (WFC), to create novel patterns inspired by traditional \alert{Sjónabók} motifs.}
+        \end{figure}
+    \end{frame}
 
 
-\begin{frame}{Where Can You See the Machine in Action?}
-    \begin{itemize}
-        \item \textbf{2024:} \includesvg[height=18pt]{include/logo-visindavaka.svg}
-        \item \textbf{2025:} 
-        \includesvg[height=18pt]{include/logo-utmessan.svg}
-        \item \textbf{2026:} Planned for \alert{Design March} and a summer residency at \alert{The Museum of Design and Applied Art}.
-    \end{itemize}
-    \includegraphics[width=\textwidth, trim=0 0 0 180pt, clip]{include/gisa.JPG}
-\end{frame}
+    \begin{frame}{Where Can You See the Machine in Action?}
+        \begin{itemize}
+            \item \textbf{2024:} \includesvg[height=18pt]{include/logo-visindavaka.svg}
+            \item \textbf{2025:}
+            \includesvg[height=18pt]{include/logo-utmessan.svg}
+            \item \textbf{2026:} Planned for \alert{Design March} and a summer residency at \alert{The Museum of Design and Applied Art}.
+        \end{itemize}
+        \includegraphics[width=\textwidth, trim=0 0 0 180pt, clip]{include/gisa.JPG}
+    \end{frame}
 
-{
-    \usebackgroundtemplate{\includegraphics[width=\paperwidth]{include/workshop.jpg}}
-    \begin{frame}
-        \frametitle{Get in Touch}
-        \vspace{2cm}
+    {
+        \usebackgroundtemplate{\includegraphics[width=\paperwidth]{include/workshop.jpg}}
+        \begin{frame}
+            \frametitle{Get in Touch}
+            \vspace{2cm}
+            \begin{columns}
+                \begin{column}{0.4\textwidth}
+                \end{column}
+                \begin{column}{0.6\textwidth}
+                    \begin{tikzpicture}
+                        \node[fill=white, fill opacity=0.8, text opacity=1, inner sep=5mm] (box) {%
+                            \begin{minipage}{\textwidth}
+                                \textbf{Websites:}
+
+                                \vspace{0.5cm}
+
+                                \begin{itemize}
+                                    \item \url{https://github.com/HiDefTextiles/}
+                                    \item \url{https://instagram.com/HiDefTextiles/}
+                                \end{itemize}
+
+                                \vspace{0.5cm}
+
+                                \textbf{E-mail:} \href{mailto:helgaingim@hi.is}{helgaingim@hi.is}
+                            \end{minipage}
+                        };
+                    \end{tikzpicture}
+                \end{column}
+            \end{columns}
+        \end{frame}
+    }
+
+    \begin{frame}[allowframebreaks]{Stitch Pattern to Machine Commands}
+        \begin{exampleblock}{Knitting One Row: Translation Function}
+            \centering
+            \begin{tikzpicture}[
+                node distance=3cm and 2cm,
+                arrow/.style={-stealth, thick},
+                textstyle/.style={font=\small}
+            ]
+                % Pattern source node
+                \node[textstyle] (pattern) {\( [1, 2, 2, 3, 4] \)};
+
+                % Translated output node
+                \node[textstyle, right=of pattern] (output) {\(
+                \left[\begin{array}{c}
+                          \left[1, 0, 0, 0, 0\right], \left[1, 0, 0, 0, 0\right], \\
+                          \left[0, 2, 2, 0, 0\right], \left[0, 2, 2, 0, 0\right], \\
+                          \left[0, 0, 0, 3, 0\right], \left[0, 0, 0, 3, 0\right], \\
+                          \left[0, 0, 0, 0, 4\right], \left[0, 0, 0, 0, 4\right]
+                \end{array}\right]
+                \)};
+
+                % Arrow and label
+                \draw[arrow] (pattern.east) -- node[above] {translated} (output.west);
+            \end{tikzpicture}
+        \end{exampleblock}
+        \vspace{1em}
+        \textbf{Explanation:}
+        \begin{itemize}
+            \item Numbers \(1, 2, 3, 4\) specify the active color for knitting (max 4 supported).
+            \item A \(0\) indicates a passive needle position (stitch not knitted in that pass).
+            \item Each row requires 8 passes: one round trip for each color.
+        \end{itemize}
+        \framebreak
+        \begin{figure}
+            \centering
+            \includegraphics[width=.9\linewidth]{include/passapiscreen.png}
+            \caption{Administrator interface of the controller}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Motor Circuit Integration}
         \begin{columns}
-            \begin{column}{0.4\textwidth}
+            \begin{column}{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.9\linewidth]{include/PASSAPMOTOR.png}
+                    \caption{Circuit diagram connecting an \textit{Arduino} to a 7407N chip, which interfaces with a 6-pin RJ12 connector to control the motor.}
+                \end{figure}
             \end{column}
-            \begin{column}{0.6\textwidth}
-                \begin{tikzpicture}
-                    \node[fill=white, fill opacity=0.8, text opacity=1, inner sep=5mm] (box) {%
-                        \begin{minipage}{\textwidth}
-                            \textbf{Websites:}
-
-                            \vspace{0.5cm}
-
-                            \begin{itemize}
-                                \item \url{https://github.com/HiDefTextiles/}
-                                \item \url{https://instagram.com/HiDefTextiles/}
-                            \end{itemize}
-
-                            \vspace{0.5cm}
-
-                            \textbf{E-mail:} \href{mailto:helgaingim@hi.is}{helgaingim@hi.is}
-                        \end{minipage}
-                    };
-                \end{tikzpicture}
+            \begin{column}{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.9\linewidth]{include/electra4600.jpg}
+                    \caption{The physical circuit implementation on the knitting machine.}
+                \end{figure}
             \end{column}
         \end{columns}
     \end{frame}
-}
-
-\begin{frame}[allowframebreaks]{Stitch Pattern to Machine Commands}
-    \begin{exampleblock}{Knitting One Row: Translation Function}
-        \centering
-        \begin{tikzpicture}[
-            node distance=3cm and 2cm,
-            arrow/.style={-stealth, thick},
-            textstyle/.style={font=\small} 
-        ]
-            % Pattern source node
-            \node[textstyle] (pattern) {\( [1, 2, 2, 3, 4] \)};
-
-            % Translated output node
-            \node[textstyle, right=of pattern] (output) {\(
-                \left[\begin{array}{c}
-                \left[1, 0, 0, 0, 0\right], \left[1, 0, 0, 0, 0\right], \\
-                \left[0, 2, 2, 0, 0\right], \left[0, 2, 2, 0, 0\right], \\
-                \left[0, 0, 0, 3, 0\right], \left[0, 0, 0, 3, 0\right], \\
-                \left[0, 0, 0, 0, 4\right], \left[0, 0, 0, 0, 4\right]
-                \end{array}\right]
-            \)};
-
-            % Arrow and label
-            \draw[arrow] (pattern.east) -- node[above] {translated} (output.west);
-        \end{tikzpicture}
-    \end{exampleblock}
-    \vspace{1em}
-    \textbf{Explanation:}
-    \begin{itemize}
-        \item Numbers \(1, 2, 3, 4\) specify the active color for knitting (max 4 supported).
-        \item A \(0\) indicates a passive needle position (stitch not knitted in that pass).
-        \item Each row requires 8 passes: one round trip for each color.
-    \end{itemize}
-    \framebreak
-    \begin{figure}
-        \centering
-        \includegraphics[width=.9\linewidth]{include/passapiscreen.png}
-        \caption{Administrator interface of the controller}
-    \end{figure}
-\end{frame}
-
-\begin{frame}{Motor Circuit Integration}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width=0.9\linewidth]{include/PASSAPMOTOR.png}
-                \caption{Circuit diagram connecting an \textit{Arduino} to a 7407N chip, which interfaces with a 6-pin RJ12 connector to control the motor.}
-            \end{figure}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width=0.9\linewidth]{include/electra4600.jpg}
-                \caption{The physical circuit implementation on the knitting machine.}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
 
 \end{document}
