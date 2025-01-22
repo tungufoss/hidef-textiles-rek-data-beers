@@ -10,8 +10,28 @@
 ]{HI-LaTeX/hi-beamer}
 \usepackage{multimedia,media9}
 \usepackage{tikz}
+\usepackage{svg}
 \usetikzlibrary{positioning, arrows, shapes, fit}
 \usepackage{textcomp}
+
+
+\newcommand{\customframe}[3][]{
+    \usebackgroundtemplate{
+        \tikz[overlay,remember picture]
+        \node[opacity=0.3, at=(current page.center)] {
+            \includegraphics[width=\paperwidth,height=\paperheight]{#2}
+        };
+    }
+    \ifx&#1&
+        \section{#3}
+    \fi
+    \addtobeamertemplate{frametitle}{\vskip5cm}{} % Adjust the frametitle position for this slide only
+    \begin{frame}[plain]{#3}
+        #1
+    \end{frame}
+    \addtobeamertemplate{frametitle}{\vskip-5cm}{} % Reset the frametitle template to default
+    \usebackgroundtemplate{}  % Reset the background for the following frames
+}
 
 \begin{document}
 
@@ -86,17 +106,14 @@
         \item[Ístex] Supplies locally sourced yarn.
         \item[The Icelandic Handicraft Association and National Museum of Iceland] Jointly published  \alert{Sjónabók}, which we use as base patterns for our work.
         \item[Marel] A leading manufacturer of equipment for fish processing plants, offering expertise in industrial mechanics and technology.
-        \item[\'{Y}rúrarí] \'Yr Jóhannsdóttir, a renowned knitting designer, formerly worked with Passap but now works with \emph{Kniterate}.
+        \item[\'{Y}rúrarí] \'Yr Jóhannsdóttir, a renowned knitting designer, formerly worked with Passap but now works with \alert{Kniterate}.
         \item[Owen Mace] Retired electrical engineer from South Australia.
     \end{description}
 \end{block}
 
 \end{frame}
 
-\begin{frame}{Direction: Machinery}
-\centering
-\includegraphics[height=0.5\textheight]{include/machines_placeholder.jpg}
-\end{frame}
+\customframe[]{include/mbl-e6000.jpg}{Machinery}
 
 \begin{frame}{Passap Knitting Machines}
 
@@ -137,7 +154,7 @@
 
 \begin{frame}{Kniterate}
 
-    \href{https://www.kniterate.com/product/kniterate-the-digital-knitting-machine/}{Kniterate}, a digital knitting machine from Spain, designed for small manufacturers. Not intended for mass-production or hobbyists. There are two such machines in Iceland.
+    \href{https://www.kniterate.com/product/kniterate-the-digital-knitting-machine/}{Kniterate}, a digital knitting machine from Spain, designed for small-batch manufacturers and designers. Only two such machines in Iceland.
 
     \begin{description}
         \item[Advantage] Originally a ``hack'' of similar 80s/90s knitting machines, it was launched on \href{https://www.kickstarter.com/projects/kniterate/kniterate-the-digital-knitting-machine/}{Kickstarter} in 2017 (then priced at \texteuro{}4,500).
@@ -151,10 +168,7 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Direction: Knitting Patterns}
-\centering
-\includegraphics[height=0.5\textheight]{include/sjonabok_placeholder.jpg}
-\end{frame}
+\customframe[]{include/sjónabók-safn.jpg}{Knitting Patterns}
 
     \begin{frame}[allowframebreaks]{The Icelandic Sjónabók}
 
@@ -178,13 +192,6 @@
         \framebreak
 
         \begin{figure}
-            \centering
-            \caption{Manuscript at the Icelandic National Museum}
-            \includegraphics[width=0.49\textwidth]{include/sjónabók-safn.jpg}
-            \includegraphics[width=0.49\textwidth]{include/jonsdottir.jpg}
-
-            \framebreak
-
             \caption{Passage from Hallgrímur Pétursson's  \textit{Passion Hymns}}
             \includegraphics[width=0.49\textwidth]{include/passiusalmur.jpg}
             \includegraphics[width=0.49\textwidth]{include/passiusalmur-zoom.jpg}
@@ -205,25 +212,23 @@
         \url{https://github.com/HiDefTextiles/Sjonabok}
     \end{frame}
 
-
-\begin{frame}{Direction: Knitting Swatches}
-\centering
-\includegraphics[height=0.5\textheight]{include/knits_placeholder.jpg}
-\end{frame}
+\customframe[]{include/swatches.jpg}{Knitting Swatches}
 
     \begin{frame}{Hello World}
+
+    \begin{quote}
+        What better way to say we've arrived in the world of digital knitting than...
+    \end{quote}
+    
         \begin{figure}
             \centering
-            \includegraphics[height=36pt, clip=true, trim=0 5mm 0 0]{include/helloworld.png}
-            \includegraphics[height=36pt, clip=true, trim=0 0 0 5mm]{include/helloworld.png}
+            \caption{First try}
+            \includegraphics[height=46pt, clip=true, trim=0 5mm 0 0]{include/helloworld.png}
+
+            \caption{Second try (after mirroring)}
+            \includegraphics[height=46pt, clip=true, trim=0 0 0 5mm]{include/helloworld.png}
         \end{figure}
 
-
-        \begin{itemize}
-            \item \textbf{Introduction to Programming:} "Hello World" is often the first program written by beginners in computer science.
-            \item \textbf{Significance:} Demonstrates the basic structure of a program, outputting text to the screen.
-            \item \textbf{Tradition:} Used as a rite of passage for learning a new programming language or environment.
-        \end{itemize}
     \end{frame}
 
     \begin{frame}{Icelandic Peacock}
@@ -258,7 +263,7 @@
     \end{frame}
 
 
-    \begin{frame}{Ragnheiður Jónsdóttir (1646-1715)}
+    \begin{frame}{Ragnheiður Jónsdóttir (1646--1715)}
         \begin{columns}
             \begin{column}{.5\linewidth}
                 \includegraphics[width=\linewidth]{include/ragnheidur.png}
@@ -266,8 +271,6 @@
             \begin{column}{.5\linewidth}
                 \begin{block}{Bishop's Wife}
                     Ragnheiður was a patron of the arts and crafts and played a pivotal role in preserving traditional Icelandic patterns.
-
-                    Her legacy is immortalized on the 5,000 króna banknote
                 \end{block}
                 \centering
                 \includegraphics[width=.7\linewidth]{include/5000kr.JPG}
@@ -276,13 +279,11 @@
     \end{frame}
 
 
-    \begin{frame}{Brynjólfur Sveinsson (1605–1675)}
+    \begin{frame}{Brynjólfur Sveinsson (1605--1675)}
         \begin{columns}
             \begin{column}{.65\linewidth}
                 \begin{block}{Bishop of Skálholt}
                     Brynjólfur was the Lutheran Bishop, renowned for his efforts in preserving Icelandic literary heritage. He contributed to the collection of Old Norse manuscripts, including \emph{Book of Flatey}, and played a key role in naming the \emph{Edda} collection.
-
-                    He is honored on the 1,000 króna banknote.
                 \end{block}
                 \centering
                 \includegraphics[width=.5\linewidth]{include/1000kr.JPG}
@@ -296,11 +297,7 @@
 
 \end{frame}
 
-\begin{frame}{Direction: What Next?}
-\centering
-\includegraphics[height=0.5\textheight]{include/future_placeholder.jpg}
-\end{frame}
-
+\customframe[]{include/swatches.jpg}{What Next?}
 
 \begin{frame}{Lessons Learned and Next Steps}
     \begin{itemize}
@@ -310,19 +307,39 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Generative Patterns}
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}[
+            node distance=6pt and 2cm,
+            arrow/.style={-stealth, thick}, 
+            image/.style={inner sep=0pt},
+            label/.style={font=\small} 
+        ]
+            % Nodes for images
+            \node[image] (sjonabok) at (0,0) {\includegraphics[width=0.1\linewidth]{include/sjonabok_after.png}};
+            \node[image, right=of sjonabok] (wfc) {\includegraphics[width=0.3\linewidth]{include/wfc.png}};
+            
+            % Labels for the images
+            \node[label, below=of sjonabok] {Pattern Source};
+            \node[label, below=of wfc] {Generated Pattern};
+
+            % Arrow connecting the images
+            \draw[arrow] ([xshift=5mm]sjonabok.east) -- ([xshift=-5mm]wfc.west) node[above, midway, font=\small] {WFC};
+        \end{tikzpicture}
+        \caption{Preliminary experiments using generative algorithms, like \alert{Wave Function Collapse} (WFC), to create novel patterns inspired by traditional \alert{Sjónabók} motifs.}
+    \end{figure}
+\end{frame}
+
+
 \begin{frame}{Where Can You See the Machine in Action?}
-\begin{columns}
-\begin{column}{0.6\linewidth}
     \begin{itemize}
-        \item \textbf{September 2024:} Showcased at \alert{Vísindavaka Rannís}.
-        \item \textbf{February 2025:} Will appear at \alert{UTmessan}.
-        \item \textbf{April 2026:} Planned for \alert{Design March} and a residency at \alert{The Museum of Design and Applied Art}.
+        \item \textbf{2024:} \includesvg[height=18pt]{include/logo-visindavaka.svg}
+        \item \textbf{2025:} 
+        \includesvg[height=18pt]{include/logo-utmessan.svg}
+        \item \textbf{2026:} Planned for \alert{Design March} and a summer residency at \alert{The Museum of Design and Applied Art}.
     \end{itemize}
-\end{column}
-\begin{column}{0.4\linewidth}
-    \includegraphics[width=\textwidth]{include/gisa.JPG}
-\end{column}
-\end{columns}
+    \includegraphics[width=\textwidth, trim=0 0 0 180pt, clip]{include/gisa.JPG}
 \end{frame}
 
 {
@@ -356,4 +373,64 @@
         \end{columns}
     \end{frame}
 }
+
+\begin{frame}[allowframebreaks]{Stitch Pattern to Machine Commands}
+    \begin{exampleblock}{Knitting One Row: Translation Function}
+        \centering
+        \begin{tikzpicture}[
+            node distance=3cm and 2cm,
+            arrow/.style={-stealth, thick},
+            textstyle/.style={font=\small} 
+        ]
+            % Pattern source node
+            \node[textstyle] (pattern) {\( [1, 2, 2, 3, 4] \)};
+
+            % Translated output node
+            \node[textstyle, right=of pattern] (output) {\(
+                \left[\begin{array}{c}
+                \left[1, 0, 0, 0, 0\right], \left[1, 0, 0, 0, 0\right], \\
+                \left[0, 2, 2, 0, 0\right], \left[0, 2, 2, 0, 0\right], \\
+                \left[0, 0, 0, 3, 0\right], \left[0, 0, 0, 3, 0\right], \\
+                \left[0, 0, 0, 0, 4\right], \left[0, 0, 0, 0, 4\right]
+                \end{array}\right]
+            \)};
+
+            % Arrow and label
+            \draw[arrow] (pattern.east) -- node[above] {translated} (output.west);
+        \end{tikzpicture}
+    \end{exampleblock}
+    \vspace{1em}
+    \textbf{Explanation:}
+    \begin{itemize}
+        \item Numbers \(1, 2, 3, 4\) specify the active color for knitting (max 4 supported).
+        \item A \(0\) indicates a passive needle position (stitch not knitted in that pass).
+        \item Each row requires 8 passes: one round trip for each color.
+    \end{itemize}
+    \framebreak
+    \begin{figure}
+        \centering
+        \includegraphics[width=.9\linewidth]{include/passapiscreen.png}
+        \caption{Administrator interface of the controller}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Motor Circuit Integration}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.9\linewidth]{include/PASSAPMOTOR.png}
+                \caption{Circuit diagram connecting an \textit{Arduino} to a 7407N chip, which interfaces with a 6-pin RJ12 connector to control the motor.}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.9\linewidth]{include/electra4600.jpg}
+                \caption{The physical circuit implementation on the knitting machine.}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
 \end{document}

@@ -1,10 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{hi-beamer}[2023/08/16 Custom Beamer Class for Háskóli Íslands]
+\ProvidesClass{HI-LaTeX/hi-beamer}[2023/08/16 Custom Beamer Class for Háskóli Íslands]
 \LoadClass[compress]{beamer}
 
 \RequirePackage{amsmath,amssymb,latexsym,graphics}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[utf8]{inputenc}
 \RequirePackage[icelandic,english]{babel}
 \RequirePackage{etoolbox}
 \RequirePackage{tcolorbox}
