@@ -81,7 +81,7 @@ The presentation covered key deliverables from the 2024 summer project, includin
 ## License
 
 This repository and its contents are shared under the Creative Commons Attribution-ShareAlike (
-CC-BY-SA) license. For details, refer to the `LICENSE` file.
+CC-BY-SA) license. For details, refer to the [LICENSE](LICENSE) file.
 
 ## Contact
 
