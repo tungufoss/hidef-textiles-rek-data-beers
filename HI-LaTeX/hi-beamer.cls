@@ -35,8 +35,11 @@
 \setbeamercolor{block title example}{bg=orange,fg=blue}
 \setbeamercolor{block body example}{bg=orange!50!white,fg=black}
 
-\setbeamercolor{itemize item}{fg=blue}
+\setbeamercolor{itemize item}{fg=teal}
 
+% Customize \emph and \alert colors
+\renewcommand\emph[1]{{\color{teal}\textbf{#1}}}
+\renewcommand\alert[1]{{\color{red}\textbf{#1}}}
 
 
 %%%%%%%%%%%%%%%%%%%%%
